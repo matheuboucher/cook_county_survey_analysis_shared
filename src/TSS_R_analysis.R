@@ -1,15 +1,14 @@
 # The following is an R script for cleaning the Tenant Satisfaction Survey that
 # is downloaded from Microsoft Forms. When running this script, it will generate
-# two Excel workbooks that have data that is cleaned and sorted to make analysis
-# easier. The first output, "cleaned_survey_r.xlsx" contains the tenant
-# satisfaction survey that has been cleaned to make analysis easier, e.g. extra
-# columns have been removed and scores that are recorded as strings like so:
-# "3 -- somewhat satisfied" have been converted to integers, in this case 3.
-# The second output, "analyzed_survey_r.xlsx" contains several tables that
-# are/will be used in the presentation of the survey results, like the number
-# of respondents by facility compared to past years, and tenant satisfaction by
-# question and facility (e.g. how satisfied tenants are with the outdoor spaces
-# at their facilities).
+# two Excel workbooks that have data that is cleaned and sorted. 
+# The first output, "cleaned_survey_r.xlsx", is a cleaned version of the tenant
+# satisfaction survey, i.e. extra columns have been removed and scores that are
+# recorded as strings in this way: "3 -- somewhat satisfied" have been converted
+# to integers, in this case 3. The second output, "analyzed_survey_r.xlsx",
+# contains several tables that are used in the presentation of the survey
+# results, like the number of respondents by facility compared to past years,
+# and tenant satisfaction by question and facility (e.g. how satisfied tenants
+# are with the outdoor spaces at their facilities).
 
 # Getting Started ---------------------------------------------------------
 

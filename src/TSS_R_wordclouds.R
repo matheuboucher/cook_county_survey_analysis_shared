@@ -6,7 +6,7 @@ source("./TSS_R_functions.R")
 
 # Word clouds ---------------------------------------------------------------
 
-#Make a name of a facility file friendly, i.e. remove special characters, etc.
+#Make the name of a facility file friendly, i.e. remove special characters, etc.
 make_name_file_friendly = function(the_string) {
   a = gsub(" ", "", the_string) %>% 
     gsub('[/]', "_", .) %>% 
@@ -53,7 +53,7 @@ gen_wordcloud = function(survey, facility_wc=NULL) {
 
 # Generate Word clouds -------------------------------------------------------
 
-#list of building names
+#list of facility names names
 temp_mean_sat = mean_satisfaction_by_facility(current_survey)
 all_facilities = as.list(temp_mean_sat$facility)
 
