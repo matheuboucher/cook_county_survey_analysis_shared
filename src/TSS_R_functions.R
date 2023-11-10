@@ -1,6 +1,6 @@
 ## THIS FILE CONTAINS FUNCTIONS TO ANALYZE A TENANT SATISFACTION SURVEY ##
 
-# Packages --------------------------------------------------
+# Packages ----------------------------------------------------------------
 # Below package start-up message suppression code is taken from Stack Overflow
 # from an answer provided by the user Greenleaf: 
 # https://stackoverflow.com/questions/18931006/how-to-suppress-warning-messages-when-loading-a-library
@@ -18,7 +18,7 @@ shhh(p_load(ggrepel))
 shhh(p_load(tm))
 shhh(p_load(wordcloud))
 
-# Names and Variables ----------------------------------------------------
+# Names and Variables -----------------------------------------------------
 
 ## Question variables
 wkdays = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
@@ -79,7 +79,7 @@ clean_survey = function(survey) {
 }
 #TEST: a = clean_survey(original_current_survey)
 
-#round table values to a specified number of decimals
+# Round table values to a specified number of decimals
 round_values_in_table = function(survey, decimals) {
   rounded_tbl = survey %>% 
     mutate(across(where(is.numeric), ~round(., decimals)))

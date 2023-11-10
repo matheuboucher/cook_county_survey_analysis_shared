@@ -67,7 +67,6 @@ f_quad_plot = function(pchange_table) {
 q_quad_plot = function(pchange_table) {
   q_quad_table = pchange_table %>% 
     mutate(., comp = if_else(change_from_2021<0, "worse", "better", missing=NULL))
-  #group_by(., comp) %>%
   
   x = q_quad_table$'current'
   y = q_quad_table$'change_from_2021'
@@ -83,9 +82,6 @@ q_quad_plot = function(pchange_table) {
   ggplot()+
     geom_point(data=qQuad22Better, aes(current, change_from_2021), size = 0.8)+ #Input the data--improve over last year.
     geom_point(data=qQuad22Worse, aes(current, change_from_2021), color='#FF0000', size = 0.8)+ #Decline from last year.
-    # geom_label_repel(data=qQuad22Better, aes(current, change_from_2021),
-    #                  label=qQuad22Better$question, size = 2, box.padding = 0.5,
-    #                  nudge_y = 0.05)+ #Hexadecimal color codes. 000000 is black, the default.FFFFFF is white.
     geom_label_repel(data=qQuad22Worse, aes(current, change_from_2021),
                      label=qQuad22Worse$question, color='#FF0000',
                      nudge_y = -0.15, size = 2, box.padding=0.5)+
